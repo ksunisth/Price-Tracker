@@ -15,7 +15,7 @@ def check_price():
     price = soup.find(id='priceblock_ourprice').get_text()
     converted_price = float(price[2:4]+price[5:8]) #to get price in float without currency symbol
 
-    if(converted_price<25000.0): #compares price
+    if(converted_price< ): #compares price. enter upper-limit amount for the product
         send_mail()
 
     print(converted_price)
